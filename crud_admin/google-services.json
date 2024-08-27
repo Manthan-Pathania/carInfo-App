@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "950741204113",
+    "project_id": "car-information-8dfd4",
+    "storage_bucket": "car-information-8dfd4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:950741204113:android:a8d14c19af196a9f7c1330",
+        "android_client_info": {
+          "package_name": "com.appexceller.carinformation"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAmo8uZlm3jPK1up4g3VUhBhwHmFsMYP4Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:950741204113:android:28735db37ac9adb17c1330",
+        "android_client_info": {
+          "package_name": "com.appexceller.crud_admin"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAmo8uZlm3jPK1up4g3VUhBhwHmFsMYP4Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
