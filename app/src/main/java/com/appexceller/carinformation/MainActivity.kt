@@ -15,29 +15,29 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        binding.searchButton.setOnClickListener {
-            val searchPhone : String = binding.searchPhone.text.toString()
-            if  (searchPhone.isNotEmpty()){
-                readData(searchPhone)
+        binding.btnSearch.setOnClickListener {
+            val searchNumber : String = binding.etSearch.text.toString()
+            if  (searchNumber.isNotEmpty()){
+                readData(searchNumber)
             }else{
-                Toast.makeText(this,"PLease enter the phone number",Toast.LENGTH_SHORT).show()
+                Toast.makeText(this,"PLease enter the vehicle number",Toast.LENGTH_SHORT).show()
             }
         }
     }
-    private fun readData(phone: String) {
+    private fun readData(vehicleNumber: String) {
         database = FirebaseDatabase.getInstance().getReference("Users")
-        database.child(phone).get().addOnSuccessListener {
+        database.child(vehicleNumber).get().addOnSuccessListener {
             if (it.exists()){
-                val name = it.child("ownerName").value
-                val operator = it.child("vehicleBrand").value
-                val location = it.child("vehicleRto").value
+                val owner = it.child("ownerName").value
+                val brand = it.child("vehicleBrand").value
+                val RTO = it.child("vehicleRto").value
                 Toast.makeText(this,"Results Found",Toast.LENGTH_SHORT).show()
-                binding.searchPhone.text.clear()
-                binding.readName.text = name.toString()
-                binding.readOperator.text = operator.toString()
-                binding.readLocation.text = location.toString()
+                binding.etSearch.text.clear()
+                binding.tvOwner.text = owner.toString()
+                binding.tvBrand.text = brand.toString()
+                binding.tvRTO.text = RTO.toString()
             }else{
-                Toast.makeText(this,"Phone number does not exist",Toast.LENGTH_SHORT).show()
+                Toast.makeText(this,"Vehicle number does not exist",Toast.LENGTH_SHORT).show()
             }
         }.addOnFailureListener{
             Toast.makeText(this,"Something went wrong",Toast.LENGTH_SHORT).show()

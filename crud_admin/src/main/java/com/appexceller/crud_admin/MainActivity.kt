@@ -14,10 +14,20 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
-        binding.mainUpload.setOnClickListener(View.OnClickListener{
+        binding.btnUpload.setOnClickListener {
             val intent = Intent(this@MainActivity, uploadActivity::class.java)
             startActivity(intent)
-            finish()
-        })
+        }
+
+        binding.btnUpdate.setOnClickListener {
+            val intent = Intent(this@MainActivity, UpdateActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.btnDelete.setOnClickListener {
+            val intent = Intent(this@MainActivity, DeleteActivity::class.java)
+            startActivity(intent)
+        }
+
     }
 }

@@ -7,9 +7,10 @@
     android:background="@color/blue"
     android:gravity="center_vertical"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".uploadActivity">
 
     <View
+        android:id="@+id/view4"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:background="@drawable/white_curvy"
@@ -76,52 +77,6 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.35" />
 
-    <androidx.appcompat.widget.AppCompatButton
-
-        android:id="@+id/btnUpload"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="70dp"
-        android:layout_marginEnd="70dp"
-        android:background="@drawable/button"
-        android:text="Upload"
-        android:textColor="@color/white"
-        app:layout_constraintBottom_toTopOf="@+id/btnUpdate"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view2"
-        app:layout_constraintVertical_bias="0.5" />
-
-    <androidx.appcompat.widget.AppCompatButton
-
-        android:id="@+id/btnUpdate"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="70dp"
-        android:layout_marginEnd="70dp"
-        android:background="@drawable/button"
-        android:text="Update"
-        android:textColor="@color/white"
-        app:layout_constraintBottom_toTopOf="@+id/btnDelete"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnUpload"
-        app:layout_constraintVertical_bias="0.5" />
-
-    <androidx.appcompat.widget.AppCompatButton
-
-        android:id="@+id/btnDelete"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="70dp"
-        android:layout_marginEnd="70dp"
-        android:background="@drawable/button"
-        android:text="DELETE"
-        android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnUpdate" />
 
     <TextView
         android:id="@+id/textView"
@@ -134,14 +89,62 @@
         android:autoSizeTextType="uniform"
         android:fontFamily="serif"
         android:gravity="center"
+        android:lines="2"
         android:paddingStart="5dp"
         android:paddingEnd="5dp"
-        android:lines="2"
-        android:text="VEHICLE INFORMATION"
+        android:text="DELETE\nVEHICLE INFORMATION"
         android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/guideline4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etDeleteNumber"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:background="@drawable/editextbackground"
+        android:ems="10"
+        android:hint="Enter Vehicle Number"
+        android:inputType="text"
+        android:paddingStart="20dp"
+        android:paddingEnd="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline11"
+        app:layout_constraintDimensionRatio="6:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline5" />
+
+    <Button
+        android:id="@+id/deleteBtn"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="90dp"
+        android:layout_marginEnd="90dp"
+        android:backgroundTint="@color/blue"
+        android:text="DELETE"
+        app:layout_constraintBottom_toTopOf="@+id/guideline10"
+        app:layout_constraintDimensionRatio="8:2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline11" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.85" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.6" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
